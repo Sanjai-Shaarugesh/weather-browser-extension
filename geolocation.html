@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Location Permission</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+    }
+    .request-box {
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px 0;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="request-box">
+    <h2>📍 Location Access</h2>
+    <p>Please allow location access for accurate weather information.</p>
+    <button id="grantAccess">Grant Access</button>
+  </div>
+  <script src="geolocation.js"></script>
+</body>
+</html>
+

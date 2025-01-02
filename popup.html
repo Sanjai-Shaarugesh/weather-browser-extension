@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch" class="theme-switch">
+        <label for="theme-switch" class="theme-switch-label">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+        </label>
+      </div>
+      <div class="location-toggle">
+        <button id="location-mode" class="location-btn">
+          <i class="fas fa-location-dot"></i>
+          <span id="location-mode-text">AUTO</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="weather-container">
+      <div class="current-weather">
+        <div class="weather-icon">
+          <i id="weather-icon" class="fas fa-sun"></i>
+        </div>
+        <div class="weather-info">
+          <h1 id="temperature">--°C</h1>
+          <p id="condition">Loading...</p>
+          <p id="location">Detecting location...</p>
+        </div>
+      </div>
+
+      <div class="details-grid">
+        <div class="detail-item">
+          <i class="fas fa-wind"></i>
+          <span>Wind</span>
+          <p id="wind-speed">-- km/h</p>
+        </div>
+        <div class="detail-item">
+          <i class="fas fa-droplet"></i>
+          <span>Humidity</span>
+          <p id="humidity">--%</p>
+        </div>
+        <div class="detail-item">
+          <i class="fas fa-temperature-high"></i>
+          <span>High</span>
+          <p id="temp-high">--°</p>
+        </div>
+        <div class="detail-item">
+          <i class="fas fa-temperature-low"></i>
+          <span>Low</span>
+          <p id="temp-low">--°</p>
+        </div>
+      </div>
+
+      <div class="forecast-container">
+        <h2>Hourly Forecast</h2>
+        <div class="hourly-forecast" id="hourly-forecast">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+
+      <div class="daily-forecast-container">
+        <h2>7-Day Forecast</h2>
+        <div class="daily-forecast" id="daily-forecast">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <div class="settings-container" id="settings-panel" style="display: none;">
+      <div class="settings-header">
+        <h2>Settings</h2>
+        <button id="close-settings" class="close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="settings-content">
+        <div class="settings-group">
+          <label for="units">Temperature Units</label>
+          <select id="units" class="settings-select">
+            <option value="celsius">Celsius (°C)</option>
+            <option value="fahrenheit">Fahrenheit (°F)</option>
+          </select>
+        </div>
+        <div class="settings-group">
+          <label for="refresh-interval">Auto Refresh Interval</label>
+          <select id="refresh-interval" class="settings-select">
+            <option value="15">15 minutes</option>
+            <option value="30">30 minutes</option>
+            <option value="60">1 hour</option>
+          </select>
+        </div>
+        <div class="settings-group">
+          <label for="manual-location">Manual Location</label>
+          <input type="text" id="manual-location" class="settings-input" 
+                 placeholder="Enter coordinates (lat,lon)">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
